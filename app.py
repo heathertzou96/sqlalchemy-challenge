@@ -5,7 +5,6 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 
-
 #Database Setup
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
@@ -62,9 +61,9 @@ def stations():
 def tobs():
     session = Session(engine)
     results = session.query(Measurement.date, Measurement.tobs).\
-              filter(Measurement.date >= '2016-08-23').\
-              filter(Measurement.station == "USC00519281").\
-              order_by(Measurement.tobs).all()
+        filter(Measurement.date >= '2016-08-23').\
+        filter(Measurement.station == "USC00519281").\
+        order_by(Measurement.tobs).all()
     session.close()
 
     all_tobs = []
@@ -127,7 +126,6 @@ def start_end():
     all_start_end.append(start_end_dict)
 
     return jsonify(all_start_end)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
