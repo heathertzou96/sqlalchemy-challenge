@@ -50,7 +50,7 @@ def stations():
     session.close()
 
     all_station = []
-    station_count = 1 #used this counter mainly to differentiate the different stations for its key values
+    station_count = 1 #used this counter mainly to differentiate the stations for its key values
     for station in results:
         station_dict = {f"station{station_count}":station}
         all_station.append(station_dict)
