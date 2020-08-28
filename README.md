@@ -34,6 +34,7 @@ Exploring the climate and analyzing precipitation, temperature, and the stations
 #### Step 2: Climate App
 * Design a Flask API based on the queries developed prior
   * Use Flask to create routes
+  
   `/` - Home page: List all routes that are available.
   
   `/api/v1.0/precipitation` - Convert the query results to a dictionary using date as the key and prcp as the value. Return the JSON representation of your   dictionary.
